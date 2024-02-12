@@ -3,7 +3,7 @@ pipeline
     agent any
     environment
     {
-       DOCKERHUB_CREDENTIALS = credentials('lehardocker')
+       DOCKERHUB_CREDENTIALS = credentials('lehar-dockerhub-token')
     }
     stages
     {
