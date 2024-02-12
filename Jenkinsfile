@@ -16,14 +16,7 @@ pipeline
 
          }
        }       
-       stage('Build Docker Image')
-       {
-         steps
-         {
-           sh 'docker Build -t lehardocker/reactapp:$BUILD_NUMBER .'
-           echo 'Build Image Completed' 
-         }
-       }       
+      
      
     }
    
