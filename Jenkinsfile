@@ -20,7 +20,7 @@ pipeline
        {
          steps
          {
-           sh 'docker Build -t lehardocker/reactapp:$BUILD_NUMBER .'
+           sh 'sudo docker build -t lehardocker/reactapp:$BUILD_NUMBER .'
            echo 'Build Image Completed' 
          }
        }       
@@ -28,7 +28,7 @@ pipeline
        {
          steps
          {
-            sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+            sh 'echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
          }
        }
        stage('Push The Image into DockerHub Account')
